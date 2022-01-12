@@ -1,0 +1,35 @@
+@import "../../Styles/main.scss";
+
+.ImageHeaderText {
+  padding: 10px;
+
+  img,
+  h3,
+  h5 {
+    padding: 10px;
+  }
+
+  img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+
+  .header {
+    max-width: 80%;
+    margin: 0 auto;
+    h3 {
+      font-weight: 700;
+      min-height: 50px;
+    }
+  }
+
+  h5 {
+    min-height: 200px;
+  }
+
+  @media screen and (max-width: $sm) {
+    h5 {
+      min-height: initial;
+    }
+  }
+}

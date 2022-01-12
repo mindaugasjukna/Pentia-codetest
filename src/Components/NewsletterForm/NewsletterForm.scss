@@ -1,0 +1,71 @@
+@import "../../Styles/variables.scss";
+
+.NewsletterForm {
+  max-width: 800px;
+  margin: 0 auto;
+
+  input {
+    width: 100%;
+    max-width: 70vw;
+    font-size: 24px;
+    padding: 10px 5px;
+    margin: 10px;
+    background-color: $red;
+    color: $white;
+    border: none;
+    border-bottom: 1px solid $white;
+
+    &::placeholder {
+      opacity: 0.7;
+      font-weight: 300;
+      color: $white;
+    }
+
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid $white;
+    }
+  }
+
+  p {
+    text-align: start;
+    padding-left: 10px;
+  }
+
+  button {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    padding: 25px 40px;
+    background-color: $white;
+    color: $red;
+    font-weight: 700;
+    margin-top: 20px;
+  }
+
+  &--single {
+    margin-right: 50px;
+
+    @media screen and (max-width: $md) {
+      margin-right: 0;
+    }
+  }
+
+  &--grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    div {
+      margin-right: 50px;
+    }
+
+    @media screen and (max-width: $md) {
+      grid-template-columns: repeat(1, 1fr);
+
+      div {
+        margin-right: 0;
+      }
+    }
+  }
+}

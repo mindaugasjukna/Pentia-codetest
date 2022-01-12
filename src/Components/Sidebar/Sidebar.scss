@@ -1,0 +1,57 @@
+@import "../../Styles/variables.scss";
+
+.Sidebar {
+  z-index: 1;
+  background-color: $black;
+  position: fixed;
+  width: $sidebar-width;
+  height: 100vh;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+
+  &--logocontainer {
+    margin: 15px;
+
+    img {
+      width: 20px;
+    }
+  }
+
+  &--menu {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 15px;
+
+    img {
+      width: 20px;
+    }
+  }
+
+  &.open {
+    width: 150px;
+  }
+
+  .arrow {
+    transform: rotate(-90deg);
+    transition: 0.2s ease-in-out;
+
+    &.rotated {
+      transform: rotate(-270deg);
+    }
+  }
+
+  ul {
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+
+    li {
+      color: $white;
+    }
+
+    &.open {
+      margin-left: 50px;
+      opacity: 1;
+    }
+  }
+}
